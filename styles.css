@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  background: hsl(210, 46%, 95%);
+  font-family: 'Manrope', sans-serif;
+  color: hsl(217, 19%, 35%);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.image > img {
+  max-width: 100%;
+}
+
+.txt-container header {
+  padding: 2rem 2rem 1rem;
+}
+
+.header {
+  font-weight: 700;
+}
+
+.description {
+  font-weight: 500;
+  color: hsl(212, 23%, 69%);
+  padding: 0 2rem 1rem;
+  line-height: 1.7rem;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.profile-img {
+  flex: 0 0 50px;
+}
+
+.profile-img > img {
+  max-width: 100%;
+  border-radius: 25px;
+}
+
+.profile-txt {
+  flex: 1 1 0;
+}
+
+.share-txt {
+  flex: 0 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: #fff;
+}
+
+.share-links {
+  flex: 1 1 0;
+  gap: 1rem;
+}
+
+.share-txt,
+.share-links {
+  display: none;
+}
+
+.profile.share {
+  background: hsl(217, 19%, 35%);
+}
+
+.profile.share > .share-txt,
+.profile.share > .share-links {
+  display: flex;
+}
+
+.profile.share > .profile-img,
+.profile.share > .profile-txt {
+  display: none;
+}
+
+.profile.share > .share-container {
+  background: hsl(214, 17%, 51%);
+}
+
+.profile.share > .share-container {
+  color: #fff;
+}
+
+.share-container {
+  flex: 0 0 40px;
+  height: 40px;
+  background: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  color: #6E8098;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.date {
+  font-weight: 500;
+  color: hsl(212, 23%, 69%);
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    max-width: 800px;
+  }
+  .image {
+    flex: 4 4 0;
+  }
+  .image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 10% 50%;
+  }
+  .txt-container {
+    flex: 6 6 0;
+  }
+}
