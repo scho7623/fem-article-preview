@@ -27,6 +27,10 @@ main {
   max-width: 100%;
 }
 
+.txt-container {
+  position: relative;
+}
+
 .txt-container header {
   padding: 2rem 2rem 1rem;
 }
@@ -83,25 +87,32 @@ main {
   background: hsl(217, 19%, 35%);
 }
 
-.profile.share > .share-txt,
-.profile.share > .share-links {
+.share {
+  background: hsl(217, 19%, 35%);
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  transition: transform 1s ease;
+}
+
+.share.open {
+  transform: translateY(-72px);
+}
+
+.share > .share-txt,
+.share > .share-links {
   display: flex;
 }
 
-.profile.share > .profile-img,
-.profile.share > .profile-txt {
-  display: none;
-}
-
-.profile.share > .share-container {
+.share > .share-button {
   background: hsl(214, 17%, 51%);
-}
-
-.profile.share > .share-container {
   color: #fff;
 }
 
-.share-container {
+.share-button {
   flex: 0 0 40px;
   height: 40px;
   background: hsl(210, 46%, 95%);
